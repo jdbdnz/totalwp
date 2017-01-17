@@ -1,0 +1,71 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+@font-face {
+  font-family: FuturaBook;
+  src: url("../fonts/fut-book.otf") format("opentype");
+}
+
+// Our variables
+$base-font-family: FuturaBook, "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", sans-serif;
+
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #35499E;
+$link-color:       #428CAE;
+$background-color: #EAF3F5;
+$brand-color:      #4E78D4;
+
+$red-color:        #AA504C;
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+$blue-color-dark:  #35499E;
+$blue-color-light: #495BA8;
+$green-color:      #35799E;
+
+// Width of the content area
+$content-width:    1100px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+@mixin media-query-min($device) {
+    @media screen and (min-width: $device) {
+        @content;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "mixins",
+        "base",
+        "layout",
+        "syntax-highlighting",
+        "brands",
+        "location",
+        "services",
+        "products"
+;

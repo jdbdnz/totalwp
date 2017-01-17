@@ -1,0 +1,24 @@
+.brands {
+  text-align: center;
+  padding-top: 60px;
+  .col-xs-6 {
+    padding: 0;
+  }
+  .thumbnail {
+    border-width: 0px;
+    min-height: 100px;
+    background-color: transparent;
+    @include media-query($on-palm) {
+      min-height: 50px;
+    }
+    img {
+      height: 60%;
+      width: 60%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  h4 {
+    padding: 20px;
+  }
+}
