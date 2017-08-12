@@ -9,6 +9,11 @@ body, blockquote, pre, h2, h4, h5, h6, hr, dl, dd, ol, ul, figure {
 /**
  * Basic styling
  */
+
+ html {
+   overflow-x: hidden
+ }
+
 body {
   font-family: $base-font-family;
   font-size: $base-font-size;
@@ -20,8 +25,9 @@ body {
   overflow-x: hidden;
 }
 
-h1, h3, p {
+h1, h2, h3, h4, p {
   padding: 5px 15px;
+  line-height: 1.5;
   @include media-query-min($on-palm) {
     padding: 5px 20px;
   }
@@ -192,10 +198,21 @@ pre {
     .paper {
       @include box-shadow(-10px, 0px, 20px, #ddd);
 
-      .mid-text {
-          max-width: 800px;
+      .text-block {
           margin: 0 auto;
-          padding: 10px 10px 20px 10px;
+          padding: 30px;
+
+          @include media-query($on-palm) {
+            padding: 0 5px 10px;
+          }
+      }
+
+      .call-to-action {
+        text-align: center;
+
+        @include media-query-min($on-laptop) {
+          text-align: right;
+        }
       }
 
       section {
@@ -206,7 +223,7 @@ pre {
             text-align: justify;
           }
         }
-        padding: 50px 0;
+        padding: 20px 0;
         .section-image {
           max-width: 200px;
           margin: 0 auto;

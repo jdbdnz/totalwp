@@ -10,16 +10,21 @@
 
       <div class="wrapper">
         <div class="paper white-bg">
-
           {{ content }}
 
           {% include footer.html %}
+        </div>
+
+        <div class="text-right hidden-xs" style="padding:10px;">
+          <a href="/TWP.pdf">Terms of Trade</a>
         </div>
       </div>
     </div>
 
     {% include brands.md %}
-
+    <div class="text-center visible-xs" style="padding:10px; width:100%;">
+      <a href="/TWP.pdf">Terms of Trade</a>
+    </div>
   </body>
 
 </html>

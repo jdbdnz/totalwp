@@ -1,7 +1,7 @@
 <div class="wrapper">
   <div class="brands clearfix">
     <h4>
-      Good business and great products, we’ve built lasting sustainable relationships with our suppliers.
+      Good business and lasting products.<br />We've built great relationships with the best waterproofing product suppliers.
     </h4>
     <br />    
     <div class="col-xs-6 col-md-4 col-lg-3">

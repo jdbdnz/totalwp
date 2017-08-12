@@ -1,5 +1,6 @@
 ---
 layout: default
-permalink: /home
+permalink: /home.html
 title: Redirect
+published: false
 ---
