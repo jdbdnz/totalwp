@@ -17,7 +17,8 @@
 <script>
   jQuery.fn.exists = function(){ return this.length > 0; }
   $('.grid').imagesLoaded(function(){
-    var $grid = $('.grid').masonry({
+    $('.grid').show();
+    $('.grid').masonry({
       columnWidth: '.grid-sizer',
       itemSelector: '.grid-item',
       percentPosition: true
