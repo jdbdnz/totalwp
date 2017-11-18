@@ -1,11 +1,22 @@
 .grid {
   display: none;
 }
+.grid-loading {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
 .grid-item {
   border: 1px solid hsla(0, 0%, 0%, 0.5);
   cursor: pointer;
 }
-
+.show-after-grid {
+  display: none;
+}
 .grid-item, .grid-sizer {
     @include media-query-min($on-laptop) {
       max-width: 25%;

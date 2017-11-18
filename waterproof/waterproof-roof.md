@@ -15,13 +15,15 @@ masonry_path: photos/roofs
   {% include contact_button.html %}
   <br />
   {% include masonry.html %}
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  {% include call_to_action.html %}
+  <div class="show-after-grid">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    {% include call_to_action.html %}
+  </div>
   <br class="visible-xs" />
 </div>
 <script>

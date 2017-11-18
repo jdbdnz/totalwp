@@ -1,3 +1,6 @@
+<div class="hide-after-grid grid-loading">
+  <img src="images/loading.gif" alt="loading images" />
+</div>
 <div class="grid">
   <div class="grid-sizer"></div>
   {% for image in site.static_files %}
@@ -9,20 +12,27 @@
   {% endfor %}
 </div>
 <script
-  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script>
   jQuery.fn.exists = function(){ return this.length > 0; }
   $('.grid').imagesLoaded(function(){
-    $('.grid').show();
+    $('.hide-after-grid').fadeOut(50);
+
     $('.grid').masonry({
       columnWidth: '.grid-sizer',
       itemSelector: '.grid-item',
       percentPosition: true
     });
+
+    $('.grid').fadeIn(100);
+
+    $('.grid').masonry();
+
+    $('.show-after-grid').fadeIn(50);
 
     function setFocus(element) {
       $('.grid-item').addClass('grid-item--unfocus');
