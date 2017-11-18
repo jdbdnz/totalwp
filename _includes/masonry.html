@@ -12,10 +12,11 @@
   src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
   integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
   crossorigin="anonymous"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script>
   jQuery.fn.exists = function(){ return this.length > 0; }
-  $(document).ready(function(){
+  $('.grid').imagesLoaded(function(){
     var $grid = $('.grid').masonry({
       columnWidth: '.grid-sizer',
       itemSelector: '.grid-item',
