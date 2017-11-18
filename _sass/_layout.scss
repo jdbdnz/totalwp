@@ -3,6 +3,10 @@
  */
  .blue-dark-bg, .blue-light-bg, .green-bg, .red-bg {
    color: #fff;
+
+   a {
+     color: #fff;
+   }
  }
  .white-bg {
    background-color: #fff;
@@ -207,6 +211,12 @@
       font-size: 18px;
     }
   }
+}
+
+img.work {
+  max-width: 100%;
+  border: 1px solid #ddd;
+  padding: 1px;
 }
 
 

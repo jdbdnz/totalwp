@@ -1,0 +1,40 @@
+.grid-item {
+  border: 1px solid hsla(0, 0%, 0%, 0.5);
+  cursor: pointer;
+}
+
+.grid-item, .grid-sizer {
+    @include media-query-min($on-laptop) {
+      max-width: 25%;
+      max-height: 400px;
+    }
+
+    @include media-query-min($on-palm) {
+      max-width: 33.3%;
+      max-height: 400px;
+    }
+
+    @include media-query($on-palm) {
+      max-width: 50%;
+      max-height: 300px;
+    }
+}
+
+.grid-item--focus {
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 2;
+  @include media-query-min($on-palm) {
+    left: 0 !important;
+  }
+  @include media-query-min($on-palm) {
+    position: fixed !important;
+    top: 10% !important;
+    top: 10vh !important;
+    left: auto !important;
+  }
+}
+
+.grid-item--unfocus {
+  opacity: 0.3;
+}

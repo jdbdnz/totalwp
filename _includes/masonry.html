@@ -1,0 +1,72 @@
+<div class="grid">
+  <div class="grid-sizer"></div>
+  {% for image in site.static_files %}
+    {% if image.path contains page.masonry_path %}
+      <div class="grid-item grid-index-{{ forloop.index }}" data-grid="{{ forloop.index }}">
+        <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script>
+  jQuery.fn.exists = function(){ return this.length > 0; }
+  $(document).ready(function(){
+    var $grid = $('.grid').masonry({
+      columnWidth: '.grid-sizer',
+      itemSelector: '.grid-item',
+      percentPosition: true
+    });
+
+    function setFocus(element) {
+      $('.grid-item').addClass('grid-item--unfocus');
+      $(element).removeClass('grid-item--unfocus');
+      $(element).addClass('grid-item--focus');
+    }
+
+    $('.grid-item').click(function(){
+      var focused = this.className.includes('focus');
+      $('.grid-item').removeClass('grid-item--focus');
+      if(!focused){
+        setFocus(this);
+      } else {
+        $('.grid-item').removeClass('grid-item--unfocus');
+      }
+      // $grid.masonry();
+    });
+
+    function changeFocus(zoom){
+      var focus = $('.grid-item--focus');
+      if(focus.exists()){
+        var newFocusId = parseInt(focus.data('grid')) + zoom;
+        var newFocus = $('.grid-index-'+newFocusId);
+        if(newFocus.exists()) {
+          $(focus).removeClass('grid-item--focus');
+          setFocus(newFocus);
+        } else {
+          console.log('new focus not found', newFocus.lenth);
+        }
+      } else {
+        console.log('focus not found', focus);
+      }
+    }
+
+    $(document).keydown(function(e) {
+      switch(e.which) {
+        case 37: // left
+        changeFocus(-1);
+        break;
+
+        case 39: // right
+        changeFocus(1);
+        break;
+
+        default: return; // exit this handler for other keys
+      }
+    });
+  });
+</script>
