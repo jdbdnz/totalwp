@@ -3,7 +3,7 @@
   {% for image in site.static_files %}
     {% if image.path contains page.masonry_path %}
       <div class="grid-item grid-index-{{ forloop.index }}" data-grid="{{ forloop.index }}">
-        <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+        <img src="{{ image.path | slice: 1,image.path.size }}" alt="image" />
       </div>
     {% endif %}
   {% endfor %}
