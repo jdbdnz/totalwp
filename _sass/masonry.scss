@@ -38,7 +38,7 @@
   max-width: 100%;
   max-height: 100%;
   z-index: 2;
-  @include media-query-min($on-palm) {
+  @include media-query($on-palm) {
     left: 0 !important;
   }
   @include media-query-min($on-palm) {
