@@ -28,47 +28,47 @@ permalink: /
 
         <ul>
           <li>
-            <a href="/waterproof-roof">
+            <a href="waterproof-roof">
               Roofs
             </a>
           </li>
           <li>
-            <a href="/waterproof-bathroom">
+            <a href="waterproof-bathroom">
               Bathrooms
             </a>
           </li>
           <li>
-            <a href="/waterproof-deck">
+            <a href="waterproof-deck">
               Decks
             </a>
           </li>
           <li>
-            <a href="/waterproof-floor">
+            <a href="waterproof-floor">
               Floors
             </a>
           </li>
           <li>
-            <a href="/waterproof-foundations">
+            <a href="waterproof-foundations">
               Foundations
             </a>
           </li>
           <li>
-            <a href="/waterproof-tank">
+            <a href="waterproof-tank">
               Tanks
             </a>
           </li>
           <li>
-            <a href="/waterproof-retaining-wall">
+            <a href="waterproof-retaining-wall">
               Retaining Walls
             </a>
           </li>
           <li>
-            <a href="/waterproof-swimming-pool">
+            <a href="waterproof-swimming-pool">
               Swimming Pools
             </a>
           </li>
           <li>
-            <a href="/waterproof-cow-shed">
+            <a href="waterproof-cow-shed">
               Cow Sheds
             </a>
           </li>

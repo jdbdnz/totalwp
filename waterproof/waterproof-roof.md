@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Roofs
-permalink: /waterproof-roof
+permalink: waterproof-roof
 masonry_path: photos/roofs
 ---
 <div class="text-block">
