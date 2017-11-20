@@ -7,7 +7,7 @@ masonry_path: photos/roofs
 <div class="text-block">
   <h1>Roof Waterproofing</h1>
   <p>
-    <img src="images/photos/roofs/roof-bg.jpg" />
+    <img src="images/photos/roof-header.jpg" />
   </p>
   <p>
     When you choose Total Watproofing you choose a durably waterproof roof applied with care and precision for a stunning look. See photos below for examples of our superior applications.
