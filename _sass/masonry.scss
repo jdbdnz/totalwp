@@ -35,17 +35,30 @@
 }
 
 .grid-item--focus {
-  max-width: 100%;
-  max-height: 100%;
   z-index: 2;
-  @include media-query($on-palm) {
-    left: 0 !important;
-  }
-  @include media-query-min($on-palm) {
-    position: fixed !important;
-    top: 10% !important;
-    top: 10vh !important;
-    left: auto !important;
+  position: fixed !important;
+  top: 0% !important;
+  left: 0% !important;
+  right: 0% !important;
+  bottom: 0% !important;
+  max-height: 100%;
+  max-width: 100%;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,0.7);
+  text-align: center;
+
+  img {
+    @include media-query-min($on-palm) {
+      position: relative;
+      top: 120px;
+    }
+
+    @include media-query($on-palm) {
+      position: absolute;
+      top: 70px;
+      margin-left: -50%;
+    }
   }
 }
 

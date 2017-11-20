@@ -59,16 +59,12 @@
         if(newFocus.exists()) {
           $(focus).removeClass('grid-item--focus');
           setFocus(newFocus);
-        } else {
-          console.log('new focus not found', newFocus.lenth);
         }
-      } else {
-        console.log('focus not found', focus);
       }
     }
 
-    $(".grid-item--focus" ).on("swiperight", function(e) { changeFocus(1) });
-    // $(".grid-item--focus" ).on("swipeleft", function(e) { changeFocus(-1) });
+    $('.grid').on("swiperight", '.grid-item--focus', function(e) { changeFocus(1) });
+    $(".grid" ).on("swipeleft", '.grid-item--focus', function(e) { changeFocus(-1) });
 
     $(document).keydown(function(e) {
       switch(e.which) {
