@@ -1,10 +1,10 @@
 ---
 layout: default
-permalink: /
+permalink: index.html
 ---
 <div class="index">
   <section>
-    <div class="text-block">
+    <div class="text-block" style="padding-top: 10px">
       <h2 class="banner">Your professional waterproofers servicing<br />Greater Auckland, Waikato, <br class="visible-xs" />and Bay of Plenty</h2>
       <p>
         <img src="images/bg.jpg" />
@@ -20,70 +20,55 @@ permalink: /
     </div>
   </section>
 
-  <section class="blue-dark-bg">
-    <div class="text-block">
-      <h3>Applications</h3>
-      <p>
-        Above and below ground Waterpoofing. Call on Total Waterproofing to waterpoof your roof, bathrooms, decks, floors, foundations, tanks, swimming pools, retaining walls, cow sheds and more.
 
-        <ul>
-          <li>
-            <a href="waterproof-roof">
-              Roofs
-            </a>
-          </li>
-          <li>
-            <a href="waterproof-bathroom">
-              Bathrooms
-            </a>
-          </li>
-          <li>
-            <a href="waterproof-deck">
-              Decks
-            </a>
-          </li>
-          <li>
-            <a href="waterproof-floor">
-              Floors
-            </a>
-          </li>
-          <li>
-            <a href="waterproof-foundations">
-              Foundations
-            </a>
-          </li>
-          <li>
-            <a href="waterproof-tank">
-              Tanks
-            </a>
-          </li>
-          <li>
-            <a href="waterproof-retaining-wall">
-              Retaining Walls
-            </a>
-          </li>
-          <li>
-            <a href="waterproof-swimming-pool">
-              Swimming Pools
-            </a>
-          </li>
-          <li>
-            <a href="waterproof-cow-shed">
-              Cow Sheds
-            </a>
-          </li>
-        </ul>
-      </p>
+  <section class="blue-light-bg clearfix">
+    <div class="text-block">
+      <div class="hidden-xs col-md-4" style="padding: 0">
+        <br />
+        <a href="torch-on-waterproofing-specialists">
+          <img src="images/photos/roofs/20130723_134831.jpg" />
+        </a>
+      </div>
+      <div class="col-xs-12 col-md-8" id="applications">
+        <a href="torch-on-waterproofing-specialists">
+          <h3>Torch-on Specialists</h3>
+        </a>
+        <p>
+          Choose a durable product expertly applied with care and precision for a stunning look. Talk to us about waterproofing with torch-on for your roof, deck, foundation, retaining walls, or sub-grade foundation.
+        </p>
+        <div class="text-right">
+          <a class="btn btn-primary" href="torch-on-waterproofing-specialists">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blue-dark-bg clearfix">
+    <div class="text-block">
+      <div class="col-xs-12 col-md-8">
+        <h3>Floor Coatings</h3>
+        <p>
+          Floor coatings are applied to concrete to prevent rising damp. We also do industrial flooring to garages, workshops, hospitals, cowshed, and other areas. We advise on the type of floor coatings to be used to accommodate for your needs and budget. All our waterproofers are approved applicators, and on job completion and full payment producer statements will be issued for council.
+        </p>
+      </div>
+      <div class="hidden-xs col-md-4" style="padding: 0">
+        <br />
+        <a href="torch-on-waterproofing-specialists">
+          <img src="images/photos/floor-coatings.jpg" />
+        </a>
+      </div>
     </div>
   </section>
 
   <section class="blue-light-bg">
     <div class="text-block">
-      <h3>Builders & Architects</h3>
-      <p>We apply fibreglass reinforced systems, sheet applied membranes, specialist floor coatings, hi-build coatings, torch-on and more.</p>
-      <div class="text-center">
-        <a class="btn btn-default" href="applications.html">Learn More</a>
-      </div>
+      <h3>All applications</h3>
+      <p>
+        Above and below ground Waterproofing. Call on Total Waterproofing to waterproof your roof, bathrooms, decks, floors, foundations, tanks, swimming pools, retaining walls, cow sheds and more.
+      </p>
+      <p>
+        We apply fibreglass reinforced systems, sheet applied membranes, specialist floor coatings, hi-build coatings, torch-on and more. Call us today to tell us about your waterproofing needs.
+      </p>
     </div>
   </section>
 </div>

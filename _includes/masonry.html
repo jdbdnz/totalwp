@@ -12,10 +12,10 @@
   {% endfor %}
 </div>
 
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript" src="//unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="//unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
 <script>
   jQuery.fn.exists = function(){ return this.length > 0; }
@@ -63,8 +63,15 @@
       }
     }
 
-    $('.grid').on("swiperight", '.grid-item--focus', function(e) { changeFocus(1) });
-    $(".grid" ).on("swipeleft", '.grid-item--focus', function(e) { changeFocus(-1) });
+    $(".grid").swipe( {
+      swipe:function(event, direction) {
+        if(['left','up'].includes(direction)) {
+          changeFocus(-1)
+        } else {
+          changeFocus(1)
+        }
+      }
+    });
 
     $(document).keydown(function(e) {
       switch(e.which) {
