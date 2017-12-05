@@ -5,7 +5,7 @@ permalink: index.html
 <div class="index">
   <section>
     <div class="text-block" style="padding-top: 10px">
-      <h2 class="banner">Your professional waterproofers servicing<br />Greater Auckland, Waikato, <br class="visible-xs" />and Bay of Plenty</h2>
+      <h2 class="banner">Your professional waterproofers servicing<br />Greater Auckland, <br class="visible-xs" />and Bay of Plenty</h2>
       <p>
         <img src="images/bg.jpg" />
       </p>
@@ -60,7 +60,25 @@ permalink: index.html
     </div>
   </section>
 
-  <section class="blue-light-bg">
+  <section class="blue-light-bg clearfix">
+    <div class="text-block clearfix">
+      <div class="hidden-xs col-md-4" style="padding: 0">
+        <br />
+        <img src="images/photos/decks/deck.jpg" />
+      </div>
+      <div class="col-xs-12 col-md-8" id="applications">
+        <h3>Fibreglass Decks and Flat Roofs</h3>
+        <p>
+          Because of its durable qualities, versatility is a point of difference for our fibreglass reinforced system; here it is applied as a sleek finish for a deck area and rooftop.
+        </p>
+        <p>
+          It provides a strong floor as well as keeping the underside dry and safe from water damage.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="blue-dark-bg">
     <div class="text-block">
       <h3>All applications</h3>
       <p>
