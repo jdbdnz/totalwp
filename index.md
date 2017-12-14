@@ -37,7 +37,7 @@ permalink: index.html
           Choose a durable product expertly applied with care and precision for a stunning look. Talk to us about waterproofing with torch-on for your roof, deck, foundation, retaining walls, or sub-grade foundation.
         </p>
         <div class="text-right">
-          <a class="btn btn-primary" href="torch-on-waterproofing-specialists">Learn More</a>
+          <a class="btn btn-primary" href="torch-on-waterproofing-specialists.html">Learn More</a>
         </div>
       </div>
     </div>
