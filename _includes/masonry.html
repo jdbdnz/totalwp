@@ -1,16 +1,25 @@
 <div class="hide-after-grid grid-loading">
   <img src="images/loading.gif" alt="loading images" />
 </div>
-<div class="grid">
-  <div class="grid-sizer"></div>
-  {% for image in site.static_files %}
-    {% if image.path contains page.masonry_path %}
-      <div class="grid-item grid-index-{{ forloop.index }}" data-grid="{{ forloop.index }}">
-        <img src="{{ image.path | slice: 1,image.path.size }}" alt="image" />
-      </div>
-    {% endif %}
-  {% endfor %}
-</div>
+
+{% assign masonry_paths = page.masonry_paths | split:"|" %}
+{% assign masonry_descriptions = page.masonry_descriptions | split:"|" %}
+{% for masonry_path in masonry_paths %}
+  <div class="clearfix">
+    <br />
+    <h3>{{masonry_descriptions[forloop.index0]}}</h3>
+    <div class="grid">
+      <div class="grid-sizer"></div>
+      {% for image in site.static_files %}
+        {% if image.path contains masonry_path %}
+          <div class="grid-item grid-index-{{ forloop.index }}" data-grid="{{ forloop.index }}">
+            <img src="{{ image.path | slice: 1,image.path.size }}" alt="image" />
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+{% endfor %}
 
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
@@ -19,72 +28,72 @@
 
 <script>
   jQuery.fn.exists = function(){ return this.length > 0; }
-  $('.grid').imagesLoaded(function(){
-    $('.hide-after-grid').fadeOut(50);
+  $('.grid').imagesLoaded(function(grids){
+    $.each(grids.elements, function(key, grid){
+      $(grid).children('.hide-after-grid').fadeOut(50);
 
-    $('.grid').masonry({
-      columnWidth: '.grid-sizer',
-      itemSelector: '.grid-item',
-      percentPosition: true
-    });
+      $(grid).masonry({
+        columnWidth: '.grid-sizer',
+        itemSelector: '.grid-item',
+        percentPosition: true
+      });
 
-    $('.grid').fadeIn(100);
+      $(grid).fadeIn(100);
+      $(grid).masonry();
+      $(grid).children('.show-after-grid').fadeIn(50);
 
-    $('.grid').masonry();
-
-    $('.show-after-grid').fadeIn(50);
-
-    function setFocus(element) {
-      $('.grid-item').addClass('grid-item--unfocus');
-      $(element).removeClass('grid-item--unfocus');
-      $(element).addClass('grid-item--focus');
-    }
-
-    $('.grid-item').click(function(){
-      var focused = this.className.indexOf('focus') > -1;
-      $('.grid-item').removeClass('grid-item--focus');
-      if(!focused){
-        setFocus(this);
-      } else {
-        $('.grid-item').removeClass('grid-item--unfocus');
+      function setFocus(element) {
+        $(grid).children('.grid-item').addClass('grid-item--unfocus');
+        $(element).removeClass('grid-item--unfocus');
+        $(element).addClass('grid-item--focus');
       }
-      // $grid.masonry();
-    });
 
-    function changeFocus(zoom){
-      var focus = $('.grid-item--focus');
-      if(focus.exists()){
-        var newFocusId = parseInt(focus.data('grid')) + zoom;
-        var newFocus = $('.grid-index-'+newFocusId);
-        if(newFocus.exists()) {
-          $(focus).removeClass('grid-item--focus');
-          setFocus(newFocus);
-        }
-      }
-    }
-
-    $(".grid").swipe( {
-      swipe:function(event, direction) {
-        if(['left','up'].indexOf(direction) > -1) {
-          changeFocus(-1)
+      $(grid).children('.grid-item').click(function(){
+        var focused = this.className.indexOf('focus') > -1;
+        $(grid).children('.grid-item').removeClass('grid-item--focus');
+        if(!focused){
+          setFocus(this);
         } else {
-          changeFocus(1)
+          $(grid).children('.grid-item').removeClass('grid-item--unfocus');
+        }
+        // $grid.masonry();
+      });
+
+      function changeFocus(zoom){
+        var focus = $(grid).children('.grid-item--focus');
+        if(focus.exists()){
+          var newFocusId = parseInt(focus.data('grid')) + zoom;
+          var newFocus = $(grid).children('.grid-index-'+newFocusId);
+          if(newFocus.exists()) {
+            $(focus).removeClass('grid-item--focus');
+            setFocus(newFocus);
+          }
         }
       }
-    });
 
-    $(document).keydown(function(e) {
-      switch(e.which) {
-        case 37: // left
-        changeFocus(-1);
-        break;
+      $(grid).swipe( {
+        swipe:function(event, direction) {
+          if(['left','up'].indexOf(direction) > -1) {
+            changeFocus(-1)
+          } else {
+            changeFocus(1)
+          }
+        }
+      });
 
-        case 39: // right
-        changeFocus(1);
-        break;
+      $(document).keydown(function(e) {
+        switch(e.which) {
+          case 37: // left
+          changeFocus(-1);
+          break;
 
-        default: return; // exit this handler for other keys
-      }
+          case 39: // right
+          changeFocus(1);
+          break;
+
+          default: return; // exit this handler for other keys
+        }
+      });
     });
   });
 </script>

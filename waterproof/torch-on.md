@@ -2,7 +2,8 @@
 layout: default
 title: Torch-On membrane for Roofs, Decks, Foundations
 permalink: torch-on-waterproofing-specialists
-masonry_path: photos/roofs
+masonry_paths: photos/roofs/1|photos/roofs/2|photos/roofs/3
+masonry_descriptions: Superior Craftsmanship|Job 1|Job 2
 ---
 <div class="text-block">
   <h1>Torch-On membrane for Roofs, Decks, and Foundations</h1>
