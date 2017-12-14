@@ -41,7 +41,7 @@
     }
 
     $('.grid-item').click(function(){
-      var focused = this.className.includes('focus');
+      var focused = this.className.indexOf('focus') > -1;
       $('.grid-item').removeClass('grid-item--focus');
       if(!focused){
         setFocus(this);
@@ -65,7 +65,7 @@
 
     $(".grid").swipe( {
       swipe:function(event, direction) {
-        if(['left','up'].includes(direction)) {
+        if(['left','up'].indexOf(direction) > -1) {
           changeFocus(-1)
         } else {
           changeFocus(1)
