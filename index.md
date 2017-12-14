@@ -26,7 +26,7 @@ permalink: index.html
       <div class="hidden-xs col-md-4" style="padding: 0">
         <br />
         <a href="torch-on-waterproofing-specialists">
-          <img src="images/photos/roofs/20130723_134831.jpg" />
+          <img src="images/photos/roofs/1/20130723_134831.jpg" />
         </a>
       </div>
       <div class="col-xs-12 col-md-8" id="applications">
