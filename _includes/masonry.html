@@ -28,8 +28,8 @@
 
 <script>
   jQuery.fn.exists = function(){ return this.length > 0; }
-  $('.grid').imagesLoaded(function(grids){
-    $.each(grids.elements, function(key, grid){
+  $.each($('.grid'), function(key, grid){
+    $(grid).imagesLoaded(function(){
       $(grid).masonry({
         columnWidth: '.grid-sizer',
         itemSelector: '.grid-item',
