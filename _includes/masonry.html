@@ -5,9 +5,9 @@
 {% assign masonry_paths = page.masonry_paths | split:"|" %}
 {% assign masonry_descriptions = page.masonry_descriptions | split:"|" %}
 {% for masonry_path in masonry_paths %}
-  <div class="clearfix">
+  <div class="clearfix grid-wrapper">
     <br />
-    <h3>{{masonry_descriptions[forloop.index0]}}</h3>
+    <h3 class="show-after-grid">{{masonry_descriptions[forloop.index0]}}</h3>
     <div class="grid">
       <div class="grid-sizer"></div>
       {% for image in site.static_files %}
@@ -30,8 +30,6 @@
   jQuery.fn.exists = function(){ return this.length > 0; }
   $('.grid').imagesLoaded(function(grids){
     $.each(grids.elements, function(key, grid){
-      $(grid).children('.hide-after-grid').fadeOut(50);
-
       $(grid).masonry({
         columnWidth: '.grid-sizer',
         itemSelector: '.grid-item',
@@ -40,7 +38,7 @@
 
       $(grid).fadeIn(100);
       $(grid).masonry();
-      $(grid).children('.show-after-grid').fadeIn(50);
+      $(grid).siblings('.show-after-grid').fadeIn(50);
 
       function setFocus(element) {
         $(grid).children('.grid-item').addClass('grid-item--unfocus');
@@ -56,7 +54,6 @@
         } else {
           $(grid).children('.grid-item').removeClass('grid-item--unfocus');
         }
-        // $grid.masonry();
       });
 
       function changeFocus(zoom){
@@ -74,9 +71,9 @@
       $(grid).swipe( {
         swipe:function(event, direction) {
           if(['left','up'].indexOf(direction) > -1) {
-            changeFocus(-1)
+            changeFocus(-1);
           } else {
-            changeFocus(1)
+            changeFocus(1);
           }
         }
       });
@@ -95,5 +92,8 @@
         }
       });
     });
+  }).done(function() {
+    $('.hide-after-grid').fadeOut(50);
+    $('.show-after-grid').fadeIn(50);
   });
 </script>
