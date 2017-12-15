@@ -1,6 +1,4 @@
-<div class="hide-after-grid grid-loading">
-  <img src="images/loading.gif" alt="loading images" />
-</div>
+
 
 {% assign masonry_paths = page.masonry_paths | split:"|" %}
 {% assign masonry_descriptions = page.masonry_descriptions | split:"|" %}
@@ -21,6 +19,10 @@
   </div>
 {% endfor %}
 
+<div class="hide-after-grid grid-loading">
+  <img src="images/loading.gif" alt="loading images" />
+</div>
+
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
 <script type="text/javascript" src="//unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
@@ -28,6 +30,7 @@
 
 <script>
   jQuery.fn.exists = function(){ return this.length > 0; }
+  var gridCount = $('.grid').length;
   $.each($('.grid'), function(key, grid){
     $(grid).imagesLoaded(function(){
       $(grid).masonry({
@@ -91,9 +94,11 @@
           default: return; // exit this handler for other keys
         }
       });
+
+      if(key === gridCount - 1) {
+        $('.hide-after-grid').fadeOut(50);
+        $('.show-after-grid').fadeIn(50);
+      }
     });
-  }).done(function() {
-    $('.hide-after-grid').fadeOut(50);
-    $('.show-after-grid').fadeIn(50);
   });
 </script>
