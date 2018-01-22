@@ -25,12 +25,12 @@ permalink: index.html
     <div class="text-block">
       <div class="hidden-xs col-md-4" style="padding: 0">
         <br />
-        <a href="torch-on-waterproofing-specialists">
+        <a href="torch-on-waterproofing-specialists.html">
           <img src="images/photos/roofs/1/20130723_134831.jpg" />
         </a>
       </div>
       <div class="col-xs-12 col-md-8" id="applications">
-        <a href="torch-on-waterproofing-specialists">
+        <a href="torch-on-waterproofing-specialists.html">
           <h3>Torch-on Specialists</h3>
         </a>
         <p>
@@ -53,7 +53,7 @@ permalink: index.html
       </div>
       <div class="hidden-xs col-md-4" style="padding: 0">
         <br />
-        <a href="torch-on-waterproofing-specialists">
+        <a href="torch-on-waterproofing-specialists.html">
           <img src="images/photos/floor-coatings.jpg" />
         </a>
       </div>
