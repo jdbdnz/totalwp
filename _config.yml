@@ -5,9 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://totalwp.co.nz" # the base hostname & protocol for your site, e.g. http://example.com
 
-phone: "09 411 9501"
-mobile: "021 626 518"
-bop_phone: "07 863 5106"
+phone: "021 626 518"
 
 address: |
   Total Waterproofing (2005) Ltd
@@ -15,7 +13,6 @@ address: |
   Waihi Beach 3642, New Zealand
 
 sales_email: tony@totalwp.co.nz
-service_email: dave@totalwp.co.nz
 
 # Build settings
 markdown: kramdown
